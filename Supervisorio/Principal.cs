@@ -8,11 +8,20 @@ using System.Windows.Forms;
 
 namespace Supervisorio
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
-        public Form1()
+        //variável global
+        string dados = "";
+        string status = "";
+        public Principal()
         {
             InitializeComponent();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            //form load
+
         }
     }
 }
