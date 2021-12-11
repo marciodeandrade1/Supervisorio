@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supervisorio", "Supervisorio.csproj", "{86F6F718-AEDC-4DD3-9A35-F3F307AC3170}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86F6F718-AEDC-4DD3-9A35-F3F307AC3170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F6F718-AEDC-4DD3-9A35-F3F307AC3170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F6F718-AEDC-4DD3-9A35-F3F307AC3170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F6F718-AEDC-4DD3-9A35-F3F307AC3170}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {236EF6A2-F89C-49F4-B7DE-EA58BD14DFE5}
+	EndGlobalSection
+EndGlobal
