@@ -74,7 +74,7 @@ namespace Supervisorio
 
         private void btnAbrirPorta_Click(object sender, EventArgs e)
         {
-            if (PortaSerial.IsOpen == true) PortaSerial.Close();
+            if (PortaSerial.IsOpen) PortaSerial.Close();
 
             PortaSerial.PortName = cbbPorta.Text;
             PortaSerial.BaudRate = Int32.Parse(cbbVelocidade.Text);
@@ -95,6 +95,21 @@ namespace Supervisorio
                 MessageBox.Show("Não foi possível abrir a porta selecionada", "ATENÇAÕ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblStatus.Text = "Erro na porta";
             }
+        }
+
+        private void btnFecharPorta_Click(object sender, EventArgs e)
+        {
+            PortaSerial.Close();
+            btnFecharPorta.Enabled = false;
+            btnSair.Enabled = true;
+            btnAbrirPorta.Enabled = true;
+            lblStatus.Text = "Porta COM fechada";
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            if (PortaSerial.IsOpen) PortaSerial.Close();
+            Close();
         }
     }
 }

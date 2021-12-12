@@ -193,6 +193,7 @@ namespace Supervisorio
             this.btnFecharPorta.TabIndex = 1;
             this.btnFecharPorta.Text = "Fechar Porta";
             this.btnFecharPorta.UseVisualStyleBackColor = true;
+            this.btnFecharPorta.Click += new System.EventHandler(this.btnFecharPorta_Click);
             // 
             // btnSair
             // 
@@ -202,6 +203,7 @@ namespace Supervisorio
             this.btnSair.TabIndex = 1;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // pnlStatus
             // 
