@@ -13,7 +13,6 @@ namespace Supervisorio
     {
         //variável global
         string dados = "";
-        string status = "";
         public Principal()
         {
             InitializeComponent();
