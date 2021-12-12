@@ -26,6 +26,22 @@ namespace Supervisorio
             AtualizaComunicacao();
             cbbVelocidade.SelectedText = "9600";
             Paridade();
+            BitsParada();
+            cbbBitsDados.SelectedText = "8";
+        }
+
+        private void BitsParada()
+        {
+            int i = 0;
+            cbbBitsParada.Items.Clear();
+            foreach (string str in Enum.GetNames(typeof(StopBits)))
+            {
+                cbbBitsParada.Items.Add(str);
+
+                if (str == "One")
+                    cbbBitsParada.SelectedIndex = i;
+                i++;
+            }
         }
 
         private void AtualizaComunicacao()
@@ -38,6 +54,7 @@ namespace Supervisorio
                 {
                     cbbPorta.Items.Add(s);
                 }
+            cbbPorta.SelectedIndex = 0;
         }
         private void Paridade()
         {
@@ -52,6 +69,31 @@ namespace Supervisorio
                 if (s == "None")
                     cbbBitsParidade.SelectedIndex = i;
                 i++; //incrementa a variável i
+            }
+        }
+
+        private void btnAbrirPorta_Click(object sender, EventArgs e)
+        {
+            if (PortaSerial.IsOpen == true) PortaSerial.Close();
+
+            PortaSerial.PortName = cbbPorta.Text;
+            PortaSerial.BaudRate = Int32.Parse(cbbVelocidade.Text);
+            PortaSerial.Parity = (Parity)cbbBitsParidade.SelectedIndex;
+            PortaSerial.DataBits = Int32.Parse(cbbBitsDados.Text);
+            PortaSerial.StopBits = (StopBits)cbbBitsParada.SelectedIndex;
+
+            try
+            {
+                PortaSerial.Open();
+                btnAbrirPorta.Enabled = false;
+                btnFecharPorta.Enabled = true;
+                btnSair.Enabled = false;
+                lblStatus.Text = "Porta " + cbbPorta.Text + " aberta";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possível abrir a porta selecionada", "ATENÇAÕ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStatus.Text = "Erro na porta";
             }
         }
     }

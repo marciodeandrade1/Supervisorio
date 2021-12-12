@@ -120,6 +120,11 @@ namespace Supervisorio
             // cbbBitsDados
             // 
             this.cbbBitsDados.FormattingEnabled = true;
+            this.cbbBitsDados.Items.AddRange(new object[] {
+            "5",
+            "6",
+            "7",
+            "8"});
             this.cbbBitsDados.Location = new System.Drawing.Point(233, 35);
             this.cbbBitsDados.Name = "cbbBitsDados";
             this.cbbBitsDados.Size = new System.Drawing.Size(99, 21);
@@ -178,6 +183,7 @@ namespace Supervisorio
             this.btnAbrirPorta.TabIndex = 1;
             this.btnAbrirPorta.Text = "Abrir Porta";
             this.btnAbrirPorta.UseVisualStyleBackColor = true;
+            this.btnAbrirPorta.Click += new System.EventHandler(this.btnAbrirPorta_Click);
             // 
             // btnFecharPorta
             // 
