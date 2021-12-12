@@ -89,6 +89,7 @@ namespace Supervisorio
                 btnFecharPorta.Enabled = true;
                 btnSair.Enabled = false;
                 lblStatus.Text = "Porta " + cbbPorta.Text + " aberta";
+                
             }
             catch (Exception)
             {
@@ -110,6 +111,24 @@ namespace Supervisorio
         {
             if (PortaSerial.IsOpen) PortaSerial.Close();
             Close();
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            if(PortaSerial.IsOpen)
+            {
+                PortaSerial.Write(txtEnviar.Text);
+            }
+        }
+
+        private void Serial_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            dados = PortaSerial.ReadExisting();
+            this.Invoke(new EventHandler(TrataDadosRecebido));
+        }
+        private void TrataDadosRecebido(object sender, EventArgs e)
+        {
+            txtReceber.Text += dados;
         }
     }
 }

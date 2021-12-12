@@ -52,6 +52,7 @@ namespace Supervisorio
             this.txtReceber = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.pnlConfiguracao.SuspendLayout();
             this.pnlStatus.SuspendLayout();
             this.SuspendLayout();
@@ -205,6 +206,10 @@ namespace Supervisorio
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // PortaSerial
+            // 
+            this.PortaSerial.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.Serial_DataReceived);
+            // 
             // pnlStatus
             // 
             this.pnlStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -212,7 +217,7 @@ namespace Supervisorio
             this.pnlStatus.Controls.Add(this.label6);
             this.pnlStatus.Location = new System.Drawing.Point(476, 126);
             this.pnlStatus.Name = "pnlStatus";
-            this.pnlStatus.Size = new System.Drawing.Size(206, 85);
+            this.pnlStatus.Size = new System.Drawing.Size(206, 115);
             this.pnlStatus.TabIndex = 2;
             // 
             // lblStatus
@@ -242,7 +247,7 @@ namespace Supervisorio
             // 
             // txtReceber
             // 
-            this.txtReceber.Location = new System.Drawing.Point(26, 192);
+            this.txtReceber.Location = new System.Drawing.Point(29, 221);
             this.txtReceber.Name = "txtReceber";
             this.txtReceber.Size = new System.Drawing.Size(433, 20);
             this.txtReceber.TabIndex = 3;
@@ -259,17 +264,28 @@ namespace Supervisorio
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 176);
+            this.label8.Location = new System.Drawing.Point(28, 201);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 5;
             this.label8.Text = "Receber";
             // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Location = new System.Drawing.Point(384, 176);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
+            this.btnEnviar.TabIndex = 6;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 253);
+            this.ClientSize = new System.Drawing.Size(704, 275);
+            this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtReceber);
@@ -318,6 +334,7 @@ namespace Supervisorio
         private System.Windows.Forms.TextBox txtReceber;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnEnviar;
     }
 }
 
