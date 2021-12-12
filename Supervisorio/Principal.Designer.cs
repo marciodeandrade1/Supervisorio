@@ -31,23 +31,23 @@ namespace Supervisorio
         {
             this.components = new System.ComponentModel.Container();
             this.pnlConfiguracao = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbbBitsParidade = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbbBitsParada = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbbBitsDados = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbbVelocidade = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbbPorta = new System.Windows.Forms.ComboBox();
             this.btnAbrirPorta = new System.Windows.Forms.Button();
             this.btnFecharPorta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.cbbPorta = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbbVelocidade = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbbBitsDados = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbbBitsParada = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbbBitsParidade = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.PortaSerial = new System.IO.Ports.SerialPort(this.components);
             this.pnlStatus = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtEnviar = new System.Windows.Forms.TextBox();
             this.txtReceber = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,6 +73,102 @@ namespace Supervisorio
             this.pnlConfiguracao.Name = "pnlConfiguracao";
             this.pnlConfiguracao.Size = new System.Drawing.Size(576, 99);
             this.pnlConfiguracao.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(464, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Paridade";
+            // 
+            // cbbBitsParidade
+            // 
+            this.cbbBitsParidade.FormattingEnabled = true;
+            this.cbbBitsParidade.Location = new System.Drawing.Point(462, 35);
+            this.cbbBitsParidade.Name = "cbbBitsParidade";
+            this.cbbBitsParidade.Size = new System.Drawing.Size(99, 21);
+            this.cbbBitsParidade.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(348, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Bits Parada";
+            // 
+            // cbbBitsParada
+            // 
+            this.cbbBitsParada.FormattingEnabled = true;
+            this.cbbBitsParada.Location = new System.Drawing.Point(346, 35);
+            this.cbbBitsParada.Name = "cbbBitsParada";
+            this.cbbBitsParada.Size = new System.Drawing.Size(99, 21);
+            this.cbbBitsParada.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(235, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Bits Dados";
+            // 
+            // cbbBitsDados
+            // 
+            this.cbbBitsDados.FormattingEnabled = true;
+            this.cbbBitsDados.Location = new System.Drawing.Point(233, 35);
+            this.cbbBitsDados.Name = "cbbBitsDados";
+            this.cbbBitsDados.Size = new System.Drawing.Size(99, 21);
+            this.cbbBitsDados.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(124, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Velocidade";
+            // 
+            // cbbVelocidade
+            // 
+            this.cbbVelocidade.FormattingEnabled = true;
+            this.cbbVelocidade.Items.AddRange(new object[] {
+            "300",
+            "600",
+            "1200",
+            "2400",
+            "4800",
+            "9600",
+            "19200",
+            "38400",
+            "57600",
+            "115200"});
+            this.cbbVelocidade.Location = new System.Drawing.Point(122, 35);
+            this.cbbVelocidade.Name = "cbbVelocidade";
+            this.cbbVelocidade.Size = new System.Drawing.Size(99, 21);
+            this.cbbVelocidade.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Porta";
+            // 
+            // cbbPorta
+            // 
+            this.cbbPorta.FormattingEnabled = true;
+            this.cbbPorta.Location = new System.Drawing.Point(12, 35);
+            this.cbbPorta.Name = "cbbPorta";
+            this.cbbPorta.Size = new System.Drawing.Size(99, 21);
+            this.cbbPorta.TabIndex = 0;
             // 
             // btnAbrirPorta
             // 
@@ -101,91 +197,6 @@ namespace Supervisorio
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             // 
-            // cbbPorta
-            // 
-            this.cbbPorta.FormattingEnabled = true;
-            this.cbbPorta.Location = new System.Drawing.Point(12, 35);
-            this.cbbPorta.Name = "cbbPorta";
-            this.cbbPorta.Size = new System.Drawing.Size(99, 21);
-            this.cbbPorta.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Porta";
-            // 
-            // cbbVelocidade
-            // 
-            this.cbbVelocidade.FormattingEnabled = true;
-            this.cbbVelocidade.Location = new System.Drawing.Point(122, 35);
-            this.cbbVelocidade.Name = "cbbVelocidade";
-            this.cbbVelocidade.Size = new System.Drawing.Size(99, 21);
-            this.cbbVelocidade.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Velocidade";
-            // 
-            // cbbBitsDados
-            // 
-            this.cbbBitsDados.FormattingEnabled = true;
-            this.cbbBitsDados.Location = new System.Drawing.Point(233, 35);
-            this.cbbBitsDados.Name = "cbbBitsDados";
-            this.cbbBitsDados.Size = new System.Drawing.Size(99, 21);
-            this.cbbBitsDados.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(235, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Bits Dados";
-            // 
-            // cbbBitsParada
-            // 
-            this.cbbBitsParada.FormattingEnabled = true;
-            this.cbbBitsParada.Location = new System.Drawing.Point(346, 35);
-            this.cbbBitsParada.Name = "cbbBitsParada";
-            this.cbbBitsParada.Size = new System.Drawing.Size(99, 21);
-            this.cbbBitsParada.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(348, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Bits Parada";
-            // 
-            // cbbBitsParidade
-            // 
-            this.cbbBitsParidade.FormattingEnabled = true;
-            this.cbbBitsParidade.Location = new System.Drawing.Point(462, 35);
-            this.cbbBitsParidade.Name = "cbbBitsParidade";
-            this.cbbBitsParidade.Size = new System.Drawing.Size(99, 21);
-            this.cbbBitsParidade.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(464, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Paridade";
-            // 
             // pnlStatus
             // 
             this.pnlStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -196,15 +207,6 @@ namespace Supervisorio
             this.pnlStatus.Size = new System.Drawing.Size(206, 85);
             this.pnlStatus.TabIndex = 2;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Status";
-            // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
@@ -213,6 +215,15 @@ namespace Supervisorio
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 17);
             this.lblStatus.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Status";
             // 
             // txtEnviar
             // 
@@ -260,7 +271,10 @@ namespace Supervisorio
             this.Controls.Add(this.btnFecharPorta);
             this.Controls.Add(this.btnAbrirPorta);
             this.Controls.Add(this.pnlConfiguracao);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supervisório";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.pnlConfiguracao.ResumeLayout(false);
