@@ -31,22 +31,30 @@ namespace Supervisorio
 
         private void BitsParada()
         {
-            int i = 0;
-            cbbBitsParada.Items.Clear();
-            foreach (string str in Enum.GetNames(typeof(StopBits)))
+            try
             {
-                cbbBitsParada.Items.Add(str);
+                int i = 0;
+                cbbBitsParada.Items.Clear();
+                foreach (string str in Enum.GetNames(typeof(StopBits)))
+                {
+                    cbbBitsParada.Items.Add(str);
 
-                if (str == "One")
-                    cbbBitsParada.SelectedIndex = i;
-                i++;
+                    if (str == "One")
+                        cbbBitsParada.SelectedIndex = i;
+                    i++;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Erro Stop Bits");
             }
         }
 
         private void AtualizaComunicacao()
         {
-         
-                //limpa itens em cbbPorta
+            try
+            {
+         //limpa itens em cbbPorta
                 cbbPorta.Items.Clear();
                 //preenche combobox com porta 
                 foreach (string s in SerialPort.GetPortNames())
@@ -54,20 +62,34 @@ namespace Supervisorio
                     cbbPorta.Items.Add(s);
                 }
             cbbPorta.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro! Verifique conexão com a porta");
+                
+            }
+              
         }
         private void Paridade()
         {
-            int i = 0; //variável de controle
-            cbbBitsParidade.Items.Clear(); //Limpa controle 
-            //busca e adiciona variável 's' a cada item
-            foreach (string s in Enum.GetNames(typeof(Parity)))
+            try
             {
-                cbbBitsParidade.Items.Add(s);
+                int i = 0; //variável de controle
+                cbbBitsParidade.Items.Clear(); //Limpa controle 
+                                               //busca e adiciona variável 's' a cada item
+                foreach (string s in Enum.GetNames(typeof(Parity)))
+                {
+                    cbbBitsParidade.Items.Add(s);
 
-                //verifica se o nome recebido é None
-                if (s == "None")
-                    cbbBitsParidade.SelectedIndex = i;
-                i++; //incrementa a variável i
+                    //verifica se o nome recebido é None
+                    if (s == "None")
+                        cbbBitsParidade.SelectedIndex = i;
+                    i++; //incrementa a variável i
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Erro de paridade!");
             }
         }
 
